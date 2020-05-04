@@ -29,7 +29,7 @@
             ],
             "styles": [
               "docs/styles.scss",
-              "projects/salt/api/webcomponent/app/asset/scss/salt.scss"
+              "projects/salt/api/webcomponents/app/components/asset/scss/salt.scss"
             ],
             "scripts": [
             ]
@@ -169,18 +169,18 @@
     "webcomponent": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/salt/api/webcomponent/app/web",
-      "sourceRoot": "projects/salt/api/webcomponent/app/web",
+      "root": "projects/salt/api/webcomponents/app/module",
+      "sourceRoot": "projects/salt/api/webcomponents/app/module",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/salt/api/webcomponent/web",
-            "index": "projects/salt/api/webcomponent/index.html",
-            "main": "projects/salt/api/webcomponent/main.ts",
-            "polyfills": "projects/salt/api/webcomponent/polyfills.ts",
-            "tsConfig": "projects/salt/api/webcomponent/tsconfig.app.json",
+            "outputPath": "dist/salt/api/module",
+            "index": "projects/salt/api/webcomponents/index.html",
+            "main": "projects/salt/api/webcomponents/main.ts",
+            "polyfills": "projects/salt/api/webcomponents/polyfills.ts",
+            "tsConfig": "projects/salt/api/webcomponents/tsconfig.app.json",
             "aot": true,
             "assets": [],
             "styles": [],
@@ -232,10 +232,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/salt/api/webcomponent/test.ts",
-            "polyfills": "projects/salt/api/webcomponent/polyfills.ts",
-            "tsConfig": "projects/salt/api/webcomponent/tsconfig.spec.json",
-            "karmaConfig": "projects/salt/api/webcomponent/karma.conf.js",
+            "main": "projects/salt/api/webcomponents/test.ts",
+            "polyfills": "projects/salt/api/webcomponents/polyfills.ts",
+            "tsConfig": "projects/salt/api/webcomponents/tsconfig.spec.json",
+            "karmaConfig": "projects/salt/api/webcomponents/karma.conf.js",
             "assets": [],
             "styles": [],
             "scripts": []
@@ -245,9 +245,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/salt/api/webcomponent/tsconfig.app.json",
-              "projects/salt/api/webcomponent/tsconfig.spec.json",
-              "projects/salt/api/webcomponent/e2e/tsconfig.json"
+              "projects/salt/api/webcomponents/tsconfig.app.json",
+              "projects/salt/api/webcomponents/tsconfig.spec.json",
+              "projects/salt/api/webcomponents/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -257,7 +257,7 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/salt/api/webcomponent/e2e/protractor.conf.js",
+            "protractorConfig": "projects/salt/api/webcomponents/e2e/protractor.conf.js",
             "devServerTarget": "webcomponent:serve"
           },
           "configurations": {

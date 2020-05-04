@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
 // Import all modules here
-import { ButtonModule } from './module/button/button.module';
+import { ButtonModule } from './components/button/button.module';
 
 @NgModule({
   imports: [

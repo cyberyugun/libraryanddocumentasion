@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "paths": {
+      "salt": [
+        "dist/salt/salt",
+        "dist/salt"
+      ]
+    }
+  },
+  "files": [
+    "docs/main.ts",
+    "docs/polyfills.ts"
+  ],
+  "include": [
+    "docs/**/*.d.ts"
+  ]
+}

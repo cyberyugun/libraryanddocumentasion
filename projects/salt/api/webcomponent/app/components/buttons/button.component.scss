@@ -1,0 +1,79 @@
+$default_color: #fff;
+$primary_color: #1976d2;
+$accent_color: #ff4081;
+$warn_color: #f44336;
+$box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+@function button-text-color($color) {  
+    @if (lightness( $color ) > 40) {
+      @return #fff;
+    }
+    @else {
+      @return #000;
+    }
+}
+
+@mixin button(
+    $background: $default_color   
+){
+    box-sizing: border-box;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: inline-block;
+    overflow: visible;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate3d(0, 0, 0);
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+
+    @if($background == $primary_color) {
+        background: $primary_color;
+    } @else if($background == $accent_color) {
+        background: $accent_color;
+    } @else if($background == $accent_color) {
+        background: $warn_color;
+    } @else if($background == $warn_color) {
+        background: $warn_color;
+    };;
+}
+
+.ft-button
+{
+    @include button;
+
+    &--shadow {
+        box-shadow: $box-shadow;
+    }
+    &--primary {
+       @include button($primary_color);
+
+        .button--label {
+            color: button-text-color($primary_color);
+        }
+       
+    }
+    &--accent {
+        @include button($accent_color);
+        .button--label {
+            color: button-text-color($primary_color);
+        }
+    }
+    &--warn {
+        @include button($warn_color);
+        .button--label {
+            color: button-text-color($warn_color);
+        }
+    }
+
+}
+

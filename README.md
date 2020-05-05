@@ -17,8 +17,3 @@ $ npm run prod:build-docs
 ```sh
 $ npm run prod:build-lib
 ```
-
-3. Build lib without node-sass:
-```sh
-$ npm run prod:build-package
-```

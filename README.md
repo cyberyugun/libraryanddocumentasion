@@ -13,7 +13,7 @@ Untuk memulai project ini di local, ketikkan perintah ini:
 $ npm run prod:build-docs
 ```
 
-2. Build lib with node-sass:
+2. Build lib:
 ```sh
 $ npm run prod:build-lib
 ```

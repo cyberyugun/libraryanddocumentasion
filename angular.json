@@ -28,8 +28,7 @@
               "docs/assets"
             ],
             "styles": [
-              "docs/styles.scss",
-              "projects/salt/api/webcomponents/app/components/asset/scss/salt.scss"
+              "docs/styles.scss"
             ],
             "scripts": [
             ]
@@ -184,7 +183,12 @@
             "aot": true,
             "assets": [],
             "styles": [],
-            "scripts": []
+            "scripts": [
+              {
+                "input":
+                  "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
